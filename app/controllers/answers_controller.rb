@@ -25,10 +25,10 @@ class AnswersController < ApplicationController
   # POST /answers.json
   def create
     @answer = Answer.new(answer_params)
-
+    @quest = Quest.find(params[:quest_id])
     respond_to do |format|
       if @answer.save
-        format.html { redirect_to @answer, notice: 'Answer was successfully created.' }
+        format.html { redirect_to quest_path(@quest), notice: 'Answer was successfully created.' }
         format.json { render action: 'show', status: :created, location: @answer }
       else
         format.html { render action: 'new' }
