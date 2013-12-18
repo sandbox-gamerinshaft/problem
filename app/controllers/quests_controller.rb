@@ -10,6 +10,7 @@ class QuestsController < ApplicationController
   # GET /quests/1
   # GET /quests/1.json
   def show
+    @answer = Answer.new
   end
 
   # GET /quests/new
