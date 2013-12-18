@@ -9,7 +9,12 @@
   <strong>Content:</strong>
   <%= @quest.content %>
 </p>
-
+<% @quest.answers.each do |answer| %>
+  <tr>
+    <td><%= answer.check %></td>
+    <td><%= answer.text %></td>
+  </tr>
+<% end %>
 
 <%= render 'answers/form' %>
 
