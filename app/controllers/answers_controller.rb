@@ -24,8 +24,8 @@ class AnswersController < ApplicationController
   # POST /answers
   # POST /answers.json
   def create
-    @answer = Answer.new(answer_params)
     @quest = Quest.find(params[:quest_id])
+    @answer = @quest.answers.build(answer_params)
     respond_to do |format|
       if @answer.save
         format.html { redirect_to quest_path(@quest), notice: 'Answer was successfully created.' }
