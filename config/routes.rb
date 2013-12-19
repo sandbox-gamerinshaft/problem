@@ -1,4 +1,6 @@
 Problem::Application.routes.draw do
+  resources :blank_answers
+
   resources :blank_questions
 
   resources :quests do

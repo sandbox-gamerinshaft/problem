@@ -1,0 +1,27 @@
+<h1>Listing blank_answers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Answer</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blank_answers.each do |blank_answer| %>
+      <tr>
+        <td><%= blank_answer.answer %></td>
+        <td><%= link_to 'Show', blank_answer %></td>
+        <td><%= link_to 'Edit', edit_blank_answer_path(blank_answer) %></td>
+        <td><%= link_to 'Destroy', blank_answer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Blank answer', new_blank_answer_path %>
