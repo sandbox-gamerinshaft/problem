@@ -9,12 +9,17 @@
   <strong>Content:</strong>
   <%= @quest.content %>
 </p>
-<% @quest.answers.each do |answer| %>
-  <tr>
-    <td><%= answer.check %></td>
-    <td><%= answer.text %></td>
-  </tr>
-<% end %>
+<table>
+	<% @quest.answers.each do |answer| %>
+	  <tr>
+	  	<% if answer.check %>
+        <td><a href="#" onclick="alert('あたり')"><%= answer.text %></a></td>
+      <% else %>
+			  <td><a href="#" onclick="alert('はずれ')"><%= answer.text %></a></td>
+		  <% end %>
+	  </tr>
+	<% end %>
+</table>
 
 <%= render 'answers/form' %>
 
