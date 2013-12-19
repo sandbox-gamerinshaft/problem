@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20131219104545) do
 
   create_table "blank_answers", force: true do |t|
     t.string   "answer"
+    t.string   "blank_question_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

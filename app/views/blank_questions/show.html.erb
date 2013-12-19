@@ -10,5 +10,8 @@
   <%= @blank_question.content %>
 </p>
 
+<%= render 'blank_answers/form' %>
+
+
 <%= link_to 'Edit', edit_blank_question_path(@blank_question) %> |
 <%= link_to 'Back', blank_questions_path %>
