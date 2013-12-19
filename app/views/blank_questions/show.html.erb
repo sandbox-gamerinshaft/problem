@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @blank_question.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @blank_question.content %>
+</p>
+
+<%= link_to 'Edit', edit_blank_question_path(@blank_question) %> |
+<%= link_to 'Back', blank_questions_path %>
