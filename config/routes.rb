@@ -1,11 +1,13 @@
 Problem::Application.routes.draw do
-  resources :blank_answers
 
-  resources :blank_questions
+
+  resources :blank_questions do
+    resources :blank_answers
+  end
 
   resources :quests do
     resources :answers
-  end  
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
